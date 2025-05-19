@@ -14,6 +14,41 @@ def calculate_patch_distance(frequency_ghz):
     return patch_distance
 
 def app():
+    st.markdown("""
+    <style>
+    h1{
+    text-align:center; 
+    font-family:'Arial Black ,Gadget,
+                sans-serif; 
+    background-color:#FA9999; 
+    box-shadow: 7px 6px 10px rgba(20, 26, 26, 7);
+    border-radius: 10px;    
+    }
+    
+    [data-testid="stVerticalBlock"] {
+        background: linear-gradient(135deg, #BAFCE9, #FFF9B7, #BCFCE7);
+        padding: 7px;
+        margin: 5px;
+        text-align: left;
+        # border: 2px solid black;
+        box-shadow: 5px 6px 6px rgba(20, 20, 20, 7);
+        border-radius: 5px;
+    }
+                
+    
+                
+    
+                
+    .stText{
+    font-family:'Verdanan',sans-serif;
+        font-size:20px;
+        line-height:1.8;
+        color:#59A4D2;            
+    }
+    
+             
+    </style>
+    """,unsafe_allow_html=True)
     st.title("Mutual Coupling & Patch Distance Calculator")
 
     uploaded_file = st.file_uploader("Upload CSV File", type=["csv"])

@@ -26,6 +26,39 @@ def app():
         font-family: Arial, sans-serif;
         font-size: 14px;
     }
+    
+    h1{
+    text-align:center; 
+    font-family:'Arial Black ,Gadget,
+                sans-serif; 
+    background-color:#FA9999; 
+    box-shadow: 7px 6px 10px rgba(20, 26, 26, 7);
+    border-radius: 10px;    
+    }
+    
+    [data-testid="stVerticalBlock"] {
+        background: linear-gradient(135deg, #BAFCE9, #FFF9B7, #BCFCE7);
+        padding: 7px;
+        margin: 5px;
+        text-align: left;
+        # border: 2px solid black;
+        box-shadow: 5px 6px 6px rgba(20, 20, 20, 7);
+        border-radius: 5px;
+    }
+                
+    
+                
+    
+                
+    .stText{
+    font-family:'Verdanan',sans-serif;
+        font-size:20px;
+        line-height:1.8;
+        color:#59A4D2;            
+    }
+    
+             
+    
     </style>
                 
     <div class="info-box">

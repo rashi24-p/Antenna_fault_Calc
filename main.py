@@ -1,7 +1,6 @@
 import streamlit as st
-from streamlit_option_menu import option_menu
 
-import first, second, third, forth, fifth, sixth
+import first, second, third, forth, fifth
 
 st.set_page_config(
     page_title="Antenna-Fault-Detector",
@@ -53,55 +52,27 @@ class MultiApp:
         """, unsafe_allow_html=True)
         
         with st.sidebar:
-            app = option_menu(
-                menu_title='Antenna-Fault Detector',
-                options=['Introduction', 'Analysis of S11', 'Analysis Of Mutual Coupling & Patch Distance', 'Analysis of Impedance', 'Analysis Of VSWR', ''],
-                icons=['graph-up', 'graph-up', 'graph-up', 'graph-up', 'graph-up'],
-                menu_icon='chat-text-fill',
-                default_index=1,
-                styles={
-                    "container": {
-                        "padding": "5!important",
-                        'border-radius': '0px',
-                        "background": 'linear-gradient(135deg, #D3F8EE, #FDE8E5, #D3F8EE)',
-                        "border": "3px solid #FB8F77",
-                    },
-                    "icon": {
-                        "color": "grey",
-                        "font-size": "23px",
-                        "font-weight": "bold"
-                    },
-                    "nav-link": {
-                        "color": "black",
-                        "font-size": "20px",
-                        "text-align": "left",
-                        "margin": "0px",
-                        "border-radius": "20px",
-                    },   
-                    "nav-link-selected": {
-                        "background-color": "#FF5A51"
-                    },
-                    "menu-title": {
-                        "color": "black",
-                        "font-size": "24px",
-                        "text-align": "center"
-                    },
-                }
+            app = st.radio(
+                "Antenna Analyzer",
+                options=['Introduction', 
+                         'Analysis of S11', 
+                         'Analysis Of Mutual Coupling & Patch Distance', 
+                         'Analysis of Impedance', 
+                         'Analysis Of VSWR']
             )
         
         if app == "Introduction":
             first.app()
-        if app == "Analysis of S11":
+        elif app == "Analysis of S11":
             second.app()
-        if app == "Analysis Of Mutual Coupling & Patch Distance":
+        elif app == "Analysis Of Mutual Coupling & Patch Distance":
             third.app()
-        if app == "Analysis of Impedance":
+        elif app == "Analysis of Impedance":
             forth.app()
-        if app == "Analysis Of VSWR":
+        elif app == "Analysis Of VSWR":
             fifth.app()
-        if app == "":
-            sixth.app()
 
 # Creating an instance and calling run()
 app_instance = MultiApp()
 app_instance.run()
+

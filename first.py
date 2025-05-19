@@ -17,8 +17,8 @@ def app():
     
     [data-testid="stVerticalBlock"] {
         background: linear-gradient(135deg, #BAFCE9, #FFF9B7, #BCFCE7);
-        padding: 2px;
-        margin: 1px;
+        padding: 7px;
+        margin: 5px;
         text-align: left;
         # border: 2px solid black;
         box-shadow: 5px 6px 6px rgba(20, 20, 20, 7);
